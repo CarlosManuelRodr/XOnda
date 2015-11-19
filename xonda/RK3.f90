@@ -11,10 +11,9 @@ subroutine RK3
     psi_p = psi
     pi_p  = pi
     
-    call rhs
-    
     ! Runge-Kutta
-    do k=1,3
+    do k=1, 3
+        call rhs
         if (k.eq.1) then
             dt_temp = dt
             phi = phi_p + dt_temp * rhs_phi

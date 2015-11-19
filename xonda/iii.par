@@ -2,8 +2,8 @@
 res_num         = 1
 xmin            = 0.0
 xmax            = 1.0
-Nxx             = 100
-Ntt             = 200
+Nxx             = 1000000
+Ntt             = 500
 courant         = 0.25
 every_0Dt       = 1 
 every_1Dt       = 10

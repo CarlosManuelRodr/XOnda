@@ -18,10 +18,10 @@ subroutine boundaries
     ! Condiciones de onda saliente
     ! Frontera izq
     psi(0) = Lmode(0)
-    pi(0) = Lmode(0)
+    pi(0)  = Lmode(0)
     
     ! Frontera derecha
     psi(Nx) = - Rmode(Nx)
-    pi(Nx) = Rmode(Nx)
+    pi(Nx)  = Rmode(Nx)
     
 end subroutine boundaries
