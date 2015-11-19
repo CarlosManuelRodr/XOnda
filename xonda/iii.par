@@ -1,0 +1,13 @@
+&ONDA_Input
+res_num         = 1
+xmin            = 0.0
+xmax            = 1.0
+Nxx             = 10
+Ntt             = 100
+courant         = 0.25
+every_0Dt       = 1 
+every_1Dt       = 10
+amplitude       = 1.0
+sigma           = 0.2
+x0              = 0.5
+/

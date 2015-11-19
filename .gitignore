@@ -21,8 +21,12 @@
 *.la
 *.a
 *.lib
+*.u2d
 
 # Executables
 *.exe
 *.out
 *.app
+
+/XOnda/Debug/
+/XOnda/Release/
