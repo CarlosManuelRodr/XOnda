@@ -32,9 +32,7 @@ subroutine evolve
         if (mod(l, every_1D).eq.0) then
             write(*, "(A5,I6,A6,ES9.2,A3)") ' |   ', l, ' | ', t, '|'
         end if
-    end do
-    print *, '----------------------------'
-    
+        
     call RK3
     
     if (mod(l, every_1D).eq.0) then
@@ -42,5 +40,7 @@ subroutine evolve
         call save1D(psi, 'psi', 1)
         call save1D(pi, 'pi', 1)
     end if
+    end do
+    print *, '----------------------------'
 
 end subroutine evolve
