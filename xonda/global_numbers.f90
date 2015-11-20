@@ -1,4 +1,3 @@
-
 module global_numbers
 
  real(kind=8) pii

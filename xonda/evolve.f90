@@ -27,9 +27,9 @@ subroutine evolve
     call save1D(phi_exacta, 'phi_exacta', 0)
     call save1D(error, 'error', 0)
     
-    do l=1, Nt ! t^n, este loop agregar· bloques de datos al archivo de salida.
+    do l=1, Nt ! t^n, este loop agregar√° bloques de datos al archivo de salida.
         
-        ! AquÌ se define el tiempo de la evoluciÛn.
+        ! Aqu√≠ se define el tiempo de la evoluci√≥n.
         t = t + dt
         
         if (mod(l, every_1D).eq.0) then

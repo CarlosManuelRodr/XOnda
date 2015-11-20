@@ -14,7 +14,7 @@ subroutine grid
     end do
     
     dt = courant * dx ! El paso en el tiempo,cuidando que las
-                      ! señales numéricas no se propaguen.
+                      ! seÃ±ales numÃ©ricas no se propaguen.
     
     print *, '============  Parametros  ==============='
     print *, 'xmin = ', xmin

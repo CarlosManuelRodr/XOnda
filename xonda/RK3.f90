@@ -1,4 +1,5 @@
 subroutine RK3
+
     use arrays
     use global_numbers
     
@@ -6,7 +7,7 @@ subroutine RK3
     integer k
     real(kind=8) dt_temp
     
-    ! Guardandoelvalor det^n de las variables
+    ! Guardando elvalor det^n de las variables
     phi_p = phi
     psi_p = psi
     pi_p  = pi

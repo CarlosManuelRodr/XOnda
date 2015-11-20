@@ -1,5 +1,4 @@
-
-subroutine save1D(fval,base_name,first_index)
+subroutine save1D(fval, base_name, first_index)
 
 use arrays
 use global_numbers
@@ -21,37 +20,39 @@ character(len=256) :: filename
 integer i,first_index
 
 if (res_num.eq.1) then
-filename = base_name // '_1.x' ! El nombre de salida + el subíndice que indica la resolución.
+    filename = base_name // '_1.x' ! El nombre de salida + el subíndice que indica la resolución.
 else if (res_num.eq.2) then
-filename = base_name // '_2.x'
+    filename = base_name // '_2.x'
 else if (res_num.eq.3) then
-filename = base_name // '_3.x'
+    filename = base_name // '_3.x'
 else if (res_num.eq.4) then
-filename = base_name // '_4.x'
+    filename = base_name // '_4.x'
 else if (res_num.eq.5) then
-filename = base_name // '_5.x'
+    filename = base_name // '_5.x'
 end if
 
 if (first_index.eq.0) then
-filestatus = 'replace' ! Aquí se borra el archivo exitente y se comienza a construir uno nuevo
+    filestatus = 'replace' ! Aquí se borra el archivo exitente y se comienza a construir uno nuevo
                        ! desde cero.
 else
-filestatus = 'old'     ! Agrega bloques de datos en tiempos t^(n+1).
+    filestatus = 'old'     ! Agrega bloques de datos en tiempos t^(n+1).
 end if
 
 ! Abre el archivo de salida.
 ! 1 es el "handle" del ardhivo. Asterisco escribe la variable con todos los decimales.
 if (filestatus=='replace') then
-open(1,file=filename,form='formatted',status=filestatus)
+    open(1, file=filename, form='formatted', status=filestatus)
 else
-open(1,file=filename,form='formatted',status=filestatus,position='append')
+    open(1, file=filename, form='formatted', status=filestatus, position='append')
 end if
+
 ! Esto es lo que va a guardar la subrutina.
 write(1,*) ''
 write(1,*) '#Time = ',t
 do i=0,Nx,2**(res_num-1)
-write(1,*) x(i),fval(i)
+    write(1,*) x(i),fval(i)
 end do 
+
 write(1,*)
 close(1)
 
