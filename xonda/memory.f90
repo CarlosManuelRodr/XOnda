@@ -11,5 +11,6 @@ allocate(phi(0:Nx), phi_p(0:Nx), rhs_phi(0:Nx))
 allocate(psi(0:Nx), psi_p(0:Nx), rhs_psi(0:Nx), dpsi(0:Nx))
 allocate(pi(0:Nx),  pi_p(0:Nx),  rhs_pi(0:Nx), dpi(0:Nx))
 allocate(Lmode(0:Nx), Rmode(0:Nx))
+allocate(phi_exacta(0:Nx), error(0:Nx))
 
 end subroutine memory

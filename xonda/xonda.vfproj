@@ -30,6 +30,7 @@
 		<File RelativePath=".\arrays.f90"/>
 		<File RelativePath=".\boundaries.f90"/>
 		<File RelativePath=".\evolve.f90"/>
+		<File RelativePath=".\exacta.f90"/>
 		<File RelativePath=".\global_numbers.f90"/>
 		<File RelativePath=".\grid.f90"/>
 		<File RelativePath=".\iii.par"/>
