@@ -13,7 +13,7 @@ subroutine grid
         x(i) = xmin + dble(i) * dx
     end do
     
-    dt = courant * dx ! El paso en el tiempo,cuidando que las
+    dt = courant * dx ! El paso en el tiempo, cuidando que las
                       ! señales numéricas no se propaguen.
     
     print *, '============  Parametros  ==============='

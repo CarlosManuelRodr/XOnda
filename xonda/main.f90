@@ -20,7 +20,7 @@ Namelist /ONDA_Input/ xmin, xmax, &
                      res_num, &
                      Nxx, courant, Ntt, &
                      every_0Dt, every_1Dt, &
-                     amplitude, sigma, x0
+                     amplitude, sigma, x0, BDR
 
 open (3, file='iii.par', status = 'old')
 read (3, nml = ONDA_Input)

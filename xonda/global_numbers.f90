@@ -8,6 +8,7 @@ module global_numbers
  integer Nx, Nt  ! Número de puntos de la malla (celdas).
  integer every_0D, every_1D ! 0D: Cada cuanto quiero guardar datos/escalares.
                             ! 1D f(x).
+ integer BDR
  
  real(kind=8) cpu_it,cpu_ft,cpu_t
 

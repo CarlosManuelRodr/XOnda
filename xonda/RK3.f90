@@ -27,9 +27,9 @@ subroutine RK3
             pi  = 0.75d0 * pi_p  + 0.25d0 * pi  + dt_temp * rhs_pi
         else
             dt_temp = 2.0d0 * dt / 3.0d0
-            phi = phi_p / 3.0d0 + 2.0d0 * phi / 3.0d0 + dt_temp * rhs_phi
-            psi = psi_p / 3.0d0 + 2.0d0 * psi / 3.0d0 + dt_temp * rhs_psi
-            pi  = pi_p  / 3.0d0 + 2.0d0 * pi  / 3.0d0 + dt_temp * rhs_pi
+            phi = (phi_p + 2.0d0 * phi) / 3.0d0 + dt_temp * rhs_phi
+            psi = (psi_p + 2.0d0 * psi) / 3.0d0 + dt_temp * rhs_psi
+            pi  = (pi_p  + 2.0d0 * pi)  / 3.0d0 + dt_temp * rhs_pi
         end if
     end do
     

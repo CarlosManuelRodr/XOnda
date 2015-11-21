@@ -1,13 +1,14 @@
 &ONDA_Input
-res_num         = 2
+res_num         = 1
 xmin            = 0.0
 xmax            = 1.0
-Nxx             = 1000
+Nxx             = 500
 Ntt             = 2000
 courant         = 0.25
-every_0Dt       = 1 
+every_0Dt       = 10
 every_1Dt       = 10
 amplitude       = 0.1
 sigma           = 0.1
 x0              = 0.5
+BDR             = 2     ! 0 Onda saliente, 1 Reflejante, 2 Periódica
 /

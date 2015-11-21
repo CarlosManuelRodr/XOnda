@@ -25,11 +25,16 @@
 
 # Data
 *.x
+*.tl
 
 # Executables
 *.exe
 *.out
 *.app
+*.5736
+*.7980
 
 /XOnda/Debug/
 /XOnda/Release/
+/XOnda/My Amplifier XE Results - xonda/
+/XOnda/x64/
