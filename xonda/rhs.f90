@@ -26,8 +26,9 @@ subroutine rhs
     dpi(Nx) = 0.5d0 * (3.0d0 * pi(Nx) - 4.0d0 * pi(Nx-1) + pi(Nx-2)) * idx
     
     ! RHS de las funciones phi, psi, pi.
-    rhs_phi = pi
-    rhs_psi = dpi
-    rhs_pi = dpsi
+    rhs_phi = alpha*pi + beta*psi
+    rhs_psi = alpha*dpi + dalpha*pi + beta*dpsi + dbeta*psi
+    rhs_pi = dgamma * (beta*pi + alpha*gamma_rr*psi) / gamma + beta*dpi + dbeta*pi + dalpha*gamma_rr*psi &
+             + alpha*dgamma_rr*psi + alpha*gamma_rr*dpsi
     
 end subroutine rhs

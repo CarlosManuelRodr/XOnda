@@ -41,6 +41,16 @@ subroutine boundaries
     
         psi(Nx) = psi(1)
         pi(Nx) = pi(1)
+    else if (BDR.eq.3) then
+        ! CF para el hoyo negro.
+        ! No condiciones de frontera. La materia cae naturalmente.
+        ! Basta una exptrapolación.
+        psi(0) = 3.0d0 * psi(1) - 3.0d0 * psi(2) + psi(3)
+        pi(0) = 3.0d0 * pi(1) - 3.0d0 * pi(2) + pi(3)
+        
+        ! Frontera derecha, onda saliente.
+        psi(Nx) = - Rmode(Nx)
+        pi(Nx)  = Rmode(Nx)
     else
         print *, 'Vales verga, este método no existe.'
     end if

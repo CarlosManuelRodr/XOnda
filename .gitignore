@@ -26,6 +26,8 @@
 # Data
 *.x
 *.tl
+*.txt
+*.csv
 
 # Executables
 *.exe
