@@ -45,3 +45,7 @@ Diferencias Finitas y Runge-Kutta.
 Por lo que para encontrar la solución a las ecuaciones diferenciales en
 el continuo las resolveremos en un espacio-tiempo discretizado mediante
 diferencias finitas.
+
+La ecuación de onda en un espacio-tiempo general puede escribirse como el d'Alambertiano de la función de onda.
+
+![](http://s3.postimg.org/q2m5qm75f/waveeq.png)
