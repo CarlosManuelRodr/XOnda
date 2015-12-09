@@ -1,9 +1,9 @@
 # XOnda
 Programa para resolver la ecuación de onda relativista.
 
+* [Guía de instalación de requisitos en Linux](https://github.com/CarlosManuelRodr/XOnda/blob/master/Tutoriales/Linux.md)
 * [Guía de instalación de requisitos en Windows](https://github.com/CarlosManuelRodr/XOnda/blob/master/Tutoriales/Windows.md)
 * [Guía de instalación de requisitos en Mac](https://github.com/CarlosManuelRodr/XOnda/blob/master/Tutoriales/Mac.md)
-
 
 Introducción a la Relatividad
 =============================
