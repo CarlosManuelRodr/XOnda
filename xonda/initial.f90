@@ -17,5 +17,7 @@ subroutine  initial
     phi = amplitude * exp(-(x-x0)**2 / sigma**2)
     psi = -2.0d0 * phi * ((x-x0) / sigma**2)
     pi = 0.0d0
+    
+    call calc_constriction
 
 end subroutine initial

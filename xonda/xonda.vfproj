@@ -50,6 +50,7 @@
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
 		<File RelativePath=".\arrays.f90"/>
 		<File RelativePath=".\boundaries.f90"/>
+		<File RelativePath=".\calc_constriction.f90"/>
 		<File RelativePath=".\evolve.f90"/>
 		<File RelativePath=".\exacta.f90"/>
 		<File RelativePath=".\global_numbers.f90"/>

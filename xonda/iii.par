@@ -1,5 +1,5 @@
 &ONDA_Input
-res_num         = 1
+res_num         = 2
 xmin            = 1.5
 xmax            = 15.0
 Nxx             = 1000
@@ -10,5 +10,6 @@ every_1Dt       = 100
 amplitude       = 0.1
 sigma           = 1.0
 x0              = 10.0
-BDR             = 3     ! 0 Onda saliente, 1 Reflejante, 2 Periódica, 3 Condiciones para hoyo negro.
+BDR             = 0     ! 0 Onda saliente, 1 Reflejante, 2 Peridica, 3 Condiciones para hoyo negro.
+MTR             = 0     ! 0 Minkowski , 1 Schwarzschild
 /

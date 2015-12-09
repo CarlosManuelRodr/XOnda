@@ -34,5 +34,6 @@ subroutine RK3
     end do
     
     call boundaries
+    call calc_constriction
     
 end subroutine RK3

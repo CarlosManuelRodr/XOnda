@@ -1,45 +1,39 @@
+program main ! Empieza el programa.
 
-!!$ --------------------------------------------------
-!!$ Authors :  Carlos Manuel Rodríguez Martinez
-!!$
-!!$ Version : 1.0 (18/11/2015)
-!!$
-!!$ Este programa resuelve la ecuacion de onda en 1D
-!!$ --------------------------------------------------
+    use global_numbers ! Numeros que usaremos en el codigo.
 
-program main
+    implicit none ! Este paso es para quitar cosas predeterminadas por Fortran.
 
-use global_numbers
+    integer Nxx, Ntt   ! El identificador integer Define enteros.
+    integer every_0Dt, every_1Dt
 
-implicit none ! Para quitar variables predeterminadas.
+    ! Parametros de entrada
+    Namelist /ONDA_Input/ xmin, xmax, &
+                         res_num, &
+                         Nxx, courant, Ntt, &
+                         every_0Dt, every_1Dt, &
+                         amplitude, sigma, x0, BDR, MTR
 
-integer Nxx, Ntt
-integer every_0Dt, every_1Dt
+    open (3, file='iii.par', status = 'old' ) ! Aqui se definen los valores de la lista anterior.
+    read (3, nml = ONDA_Input)
+    close(3)
 
-Namelist /ONDA_Input/ xmin, xmax, &
-                     res_num, &
-                     Nxx, courant, Ntt, &
-                     every_0Dt, every_1Dt, &
-                     amplitude, sigma, x0, BDR
+    pii = 4.0d0*atan(1.0d0)
 
-open (3, file='iii.par', status = 'old')
-read (3, nml = ONDA_Input)
-close(3)
+    ! res_num me define la resolucion.
+    Nx = 2**(res_num-1)*Nxx ! Numero de puntos/divisiones/celdas de la malla.
+    Nt = 2**(res_num-1)*Ntt 
 
-pii = 4.0d0*atan(1.0d0)
+    every_0D = 2**(res_num-1)*every_0Dt ! Cada cuanto quiero guardar datos/escalares.
+    every_1D = 2**(res_num-1)*every_1Dt ! Cada cuanto guardo cantidades como f(x).
 
-Nx = 2**(res_num-1)*Nxx
-Nt = 2**(res_num-1)*Ntt
-every_0D = 2**(res_num-1)*every_0Dt
-every_1D = 2**(res_num-1)*every_1Dt
+    call CPU_TIME(cpu_it) ! call -- llama a subrutinas dentro de la carpeta onda-uv.
+    call evolve
+    call CPU_TIME(cpu_ft)
 
-call cpu_time(cpu_it)
-call evolve
-call cpu_time(cpu_ft)
-
-print *
-print *, 'PROGRAM ONDA-UV HAS FINISHED'
-print *, 'CPU time has been =', cpu_ft - cpu_it
-print *
+    print * ! print -- sirve para mandar a pantalla alguna cantidad o texto.
+    print *, 'PROGRAM ONDA-UV HAS FINISHED'
+    print *, 'CPU time has been =', cpu_ft-cpu_it
+    print *
 
 end program main

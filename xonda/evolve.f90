@@ -29,6 +29,7 @@ subroutine evolve
     call save1D(error, 'error', 0)
     call save1D(alpha, 'alpha', 0)
     call save1D(beta, 'beta', 0)
+    call save1D(constriction, 'constriction', 0)
     call save0D(error, 'error', 0)
     
     do l=1, Nt ! t^n, este loop agregará bloques de datos al archivo de salida.
@@ -53,6 +54,7 @@ subroutine evolve
             call save1D(psi, 'psi', 1)
             call save1D(pi, 'pi', 1)
             call save1D(phi_exacta, 'phi_exacta', 1)
+            call save1D(constriction, 'constriction', 1)
             call save1D(error, 'error', 1)
         end if
         
